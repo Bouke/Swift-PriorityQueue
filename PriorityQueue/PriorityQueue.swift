@@ -18,7 +18,7 @@ public class PriorityQueue<T> {
         self.compare = compare
     }
 
-    public func append(newElement: T) {
+    public func push(newElement: T) {
         heap.append(newElement)
 
         if heap.count == 1 {
@@ -36,7 +36,7 @@ public class PriorityQueue<T> {
         }
     }
 
-    public func next() -> T? {
+    public func pop() -> T? {
         if heap.count == 0 {
             return nil
         }
@@ -76,6 +76,9 @@ public class PriorityQueue<T> {
 
 extension PriorityQueue: GeneratorType {
     typealias Element = T
+    public func next() -> Element? {
+        return pop()
+    }
 }
 
 extension PriorityQueue: SequenceType {

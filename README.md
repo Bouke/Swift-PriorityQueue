@@ -12,9 +12,9 @@ operate on characters like this:
 
 ```swift
 var characters = PriorityQueue<Character>(<)
-characters.append("C")
-characters.append("B")
-characters.append("A")
+characters.push("C")
+characters.push("B")
+characters.push("A")
 
 println("Characters:")
 for p in characters {
@@ -37,10 +37,10 @@ struct Node {
 }
 
 var nodes = PriorityQueue<Node>({ $0.priority < $1.priority })
-nodes.append(Node(priority: 4))
-nodes.append(Node(priority: 5))
-nodes.append(Node(priority: 3))
-nodes.append(Node(priority: 1))
+nodes.push(Node(priority: 4))
+nodes.push(Node(priority: 5))
+nodes.push(Node(priority: 3))
+nodes.push(Node(priority: 1))
 
 println("Nodes:")
 for node in nodes {
