@@ -31,6 +31,10 @@ class PriorityQueueTests: XCTestCase {
         XCTAssertEqual(9, queue.next()!)
         XCTAssertEqual(10, queue.next()!)
         XCTAssertTrue(queue.next() == nil)
+
+        queue.push(11)
+        XCTAssertEqual(11, queue.remove(11) ?? -1)
+        XCTAssertNil(queue.remove(11))
     }
 
     func testPushPerformance() {
