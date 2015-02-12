@@ -7,5 +7,13 @@
         </code>
         <documentation relative-path="section-2.html">
         </documentation>
+        <code source-file-name="section-3.swift">
+        </code>
+        <documentation relative-path="section-4.html">
+        </documentation>
+        <code source-file-name="section-5.swift">
+        </code>
+        <documentation relative-path="section-6.html">
+        </documentation>
     </sections>
 </playground>

@@ -1,23 +1,61 @@
 # Swift-PriorityQueue
 
+When included as a framework, import it as any other framework:
+
 ```swift
 import PriorityQueue
-
-var queue = PriorityQueue<Double, String>()
-queue.push(3, item: "C")
-queue.push(2, item: "B")
-queue.push(1, item: "A")
-
-for p in queue {
-    println(" * \(p)")
-}
 ```
 
-Prints:
+The priority queue is defined as a generic and initialized with a comparison 
+callback, like  `PriorityQueue<T>((T, T) -> Bool)`. For example, it can 
+operate on characters like this:
+
+```swift
+var characters = PriorityQueue<Character>(<)
+characters.push("C")
+characters.push("B")
+characters.push("A")
+
+println("Characters:")
+for p in characters {
+    println(" * \(p)")
+}
+println()
+```
+
+This would print:
 
      * A
      * B
      * C
+
+A more real-world use-case would operate on structs or classes, like this:
+
+```swift
+struct Node {
+    let priority: Int
+}
+
+var nodes = PriorityQueue<Node>({ $0.priority < $1.priority })
+nodes.push(Node(priority: 4))
+nodes.push(Node(priority: 5))
+nodes.push(Node(priority: 3))
+nodes.push(Node(priority: 1))
+
+println("Nodes:")
+for node in nodes {
+    println(" * Node(priority: \(node.priority))")
+}
+println()
+```
+
+This would print:
+
+    Nodes:
+    * Node(priority: 1)
+    * Node(priority: 3)
+    * Node(priority: 4)
+    * Node(priority: 5)
 
 ## Alternatives
 

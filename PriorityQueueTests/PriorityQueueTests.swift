@@ -12,15 +12,15 @@ import XCTest
 
 class PriorityQueueTests: XCTestCase {
     func testSimple() {
-        var queue = PriorityQueue<Int, Int>()
-        queue.push(10, item: 10)
-        queue.push(2, item: 2)
-        queue.push(3, item: 3)
-        queue.push(1, item: 1)
-        queue.push(2, item: 2)
-        queue.push(3, item: 3)
-        queue.push(9, item: 9)
-        queue.push(5, item: 5)
+        var queue = PriorityQueue<Int>(<)
+        queue.push(10)
+        queue.push(2)
+        queue.push(3)
+        queue.push(1)
+        queue.push(2)
+        queue.push(3)
+        queue.push(9)
+        queue.push(5)
 
         XCTAssertEqual(1, queue.next()!)
         XCTAssertEqual(2, queue.next()!)
@@ -35,10 +35,10 @@ class PriorityQueueTests: XCTestCase {
 
     func testPushPerformance() {
         measureMetrics(self.dynamicType.defaultPerformanceMetrics(), automaticallyStartMeasuring:false) {
-            var queue = PriorityQueue<UInt32, Int>()
+            var queue = PriorityQueue<UInt32>(<)
             self.startMeasuring()
             for var i = 0; i < 10000; i += 1 {
-                queue.push(arc4random(), item: i)
+                queue.push(arc4random())
             }
             self.stopMeasuring()
         }
@@ -46,9 +46,9 @@ class PriorityQueueTests: XCTestCase {
 
     func testPopPerformance() {
         measureMetrics(self.dynamicType.defaultPerformanceMetrics(), automaticallyStartMeasuring:false) {
-            var queue = PriorityQueue<UInt32, Int>()
+            var queue = PriorityQueue<UInt32>(<)
             for var i = 0; i < 1000; i += 1 {
-                queue.push(arc4random(), item: 1)
+                queue.push(arc4random())
             }
 
             self.startMeasuring()

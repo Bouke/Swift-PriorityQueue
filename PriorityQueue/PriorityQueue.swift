@@ -8,14 +8,18 @@
 
 import Foundation
 
-public class PriorityQueue<PrioType: Comparable, ValueType>: GeneratorType {
-    typealias Element = ValueType
-    private final var heap = [(PrioType, ValueType)]()
+public class PriorityQueue<T> {
 
-    public init() { }
+    private final var heap: [T]
+    private let compare: (T, T) -> Bool
 
-    public func push(priority: PrioType, item: ValueType) {
-        heap.append((priority, item))
+    public init(_ compare: (T, T) -> Bool) {
+        heap = []
+        self.compare = compare
+    }
+
+    public func push(item: T) {
+        heap.append(item)
 
         if heap.count == 1 {
             return
@@ -24,7 +28,7 @@ public class PriorityQueue<PrioType: Comparable, ValueType>: GeneratorType {
         var current = heap.count - 1
         while current > 0 {
             var parent = (current - 1) >> 1
-            if heap[parent].0 <= heap[current].0 {
+            if compare(heap[parent], heap[current]) {
                 break
             }
             (heap[parent], heap[current]) = (heap[current], heap[parent])
@@ -32,11 +36,7 @@ public class PriorityQueue<PrioType: Comparable, ValueType>: GeneratorType {
         }
     }
 
-    public func next() -> ValueType? {
-        return pop()?.1
-    }
-
-    public func pop() -> (PrioType, ValueType)? {
+    public func next() -> T? {
         if heap.count == 0 {
             return nil
         }
@@ -47,7 +47,7 @@ public class PriorityQueue<PrioType: Comparable, ValueType>: GeneratorType {
     }
 
     public func removeAll() {
-        heap = []
+        heap.removeAll()
     }
 
     private func heapify(index: Int) {
@@ -57,10 +57,10 @@ public class PriorityQueue<PrioType: Comparable, ValueType>: GeneratorType {
 
         let count = heap.count
 
-        if left < count && heap[left].0 < heap[smallest].0 {
+        if left < count && compare(heap[left], heap[smallest]) {
             smallest = left
         }
-        if right < count && heap[right].0 < heap[smallest].0 {
+        if right < count && compare(heap[right], heap[smallest]) {
             smallest = right
         }
         if smallest != index {
@@ -72,6 +72,10 @@ public class PriorityQueue<PrioType: Comparable, ValueType>: GeneratorType {
     public var count: Int {
         return heap.count
     }
+}
+
+extension PriorityQueue: GeneratorType {
+    typealias Element = T
 }
 
 extension PriorityQueue: SequenceType {
