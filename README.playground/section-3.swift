@@ -1,7 +1,7 @@
 var characters = PriorityQueue<Character>(<)
-characters.push("C")
-characters.push("B")
-characters.push("A")
+characters.append("C")
+characters.append("B")
+characters.append("A")
 
 println("Characters:")
 for p in characters {

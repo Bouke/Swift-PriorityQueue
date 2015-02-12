@@ -18,8 +18,8 @@ public class PriorityQueue<T> {
         self.compare = compare
     }
 
-    public func push(item: T) {
-        heap.append(item)
+    public func append(newElement: T) {
+        heap.append(newElement)
 
         if heap.count == 1 {
             return
