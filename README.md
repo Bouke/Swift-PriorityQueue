@@ -57,12 +57,22 @@ This would print:
     * Node(priority: 4)
     * Node(priority: 5)
 
-## Alternatives
+## Removing items
+
+```swift
+var ints = PriorityQueue<Int>(<)
+ints.push(3)
+ints.remove(3)  // Returns 3
+ints.remove(3)  // Returns nil
+```
+
+# Alternatives
 
 * CFBinaryHeap (once CFunctionPointer becomes available)
 * Swift-DataStructures/MinPQ
 
-## Note to self
+# Development
+## Playground
 
 Rebuild this playground with the following command:
 

@@ -72,6 +72,19 @@ public class PriorityQueue<T> {
     public var count: Int {
         return heap.count
     }
+
+    public func remove<T2 where T2: Comparable>(element: T2) -> T? {
+        assert(element is T)  // How to enforce this with type constraints?
+        for (index, item) in enumerate(heap) {
+            if (item as T2) == element {
+                swap(&heap[index], &heap[heap.endIndex - 1])
+                heap.removeLast()
+                heapify(index)
+                return item
+            }
+        }
+        return nil
+    }
 }
 
 extension PriorityQueue: GeneratorType {

@@ -15,5 +15,9 @@
         </code>
         <documentation relative-path="section-6.html">
         </documentation>
+        <code source-file-name="section-7.swift">
+        </code>
+        <documentation relative-path="section-8.html">
+        </documentation>
     </sections>
 </playground>
