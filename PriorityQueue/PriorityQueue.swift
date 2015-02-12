@@ -1,3 +1,11 @@
+//
+//  PriorityQueue.swift
+//  Swift-PriorityQueue
+//
+//  Created by Bouke Haarsma on 12-02-15.
+//  Copyright (c) 2015 Bouke Haarsma. All rights reserved.
+//
+
 import Foundation
 
 public class PriorityQueue<PrioType: Comparable, ValueType>: GeneratorType {
