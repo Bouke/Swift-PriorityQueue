@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5F72F371A8D423C006A0BE9 /* PriorityQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F72F2C1A8D423C006A0BE9 /* PriorityQueue.framework */; };
+		D5C03D461A8DD1AD00FBD3C5 /* PriorityQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F72F2C1A8D423C006A0BE9 /* PriorityQueue.framework */; };
+		D5C03D661A8DD26A00FBD3C5 /* PriorityQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C03D4C1A8DD1D800FBD3C5 /* PriorityQueue.framework */; };
+		D5C03D671A8DD40400FBD3C5 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F72F451A8D4273006A0BE9 /* PriorityQueue.swift */; };
+		D5C03D681A8DD40900FBD3C5 /* PriorityQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F72F3D1A8D423C006A0BE9 /* PriorityQueueTests.swift */; };
 		D5F72F3E1A8D423C006A0BE9 /* PriorityQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F72F3D1A8D423C006A0BE9 /* PriorityQueueTests.swift */; };
 		D5F72F461A8D4273006A0BE9 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F72F451A8D4273006A0BE9 /* PriorityQueue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D5C03D581A8DD1D800FBD3C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5F72F001A8D4120006A0BE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5C03D4B1A8DD1D800FBD3C5;
+			remoteInfo = "PriorityQueue-OSX";
+		};
 		D5F72F381A8D423C006A0BE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5F72F001A8D4120006A0BE9 /* Project object */;
@@ -24,17 +34,34 @@
 
 /* Begin PBXFileReference section */
 		D5AF859F1A8D494E00534CB9 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D5C03D4C1A8DD1D800FBD3C5 /* PriorityQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PriorityQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C03D561A8DD1D800FBD3C5 /* PriorityQueue-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriorityQueue-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C1D4B91A8D442C00C3F3E3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D5C1D4BB1A8D45E000C3F3E3 /* README.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = README.playground; sourceTree = "<group>"; };
 		D5F72F2C1A8D423C006A0BE9 /* PriorityQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PriorityQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F72F2F1A8D423C006A0BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5F72F361A8D423C006A0BE9 /* PriorityQueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PriorityQueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F72F361A8D423C006A0BE9 /* PriorityQueue-IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriorityQueue-IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F72F3C1A8D423C006A0BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5F72F3D1A8D423C006A0BE9 /* PriorityQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueTests.swift; sourceTree = "<group>"; };
 		D5F72F451A8D4273006A0BE9 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D5C03D481A8DD1D800FBD3C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C03D531A8DD1D800FBD3C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C03D661A8DD26A00FBD3C5 /* PriorityQueue.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5F72F281A8D423C006A0BE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5F72F371A8D423C006A0BE9 /* PriorityQueue.framework in Frameworks */,
+				D5C03D461A8DD1AD00FBD3C5 /* PriorityQueue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				D5F72F2C1A8D423C006A0BE9 /* PriorityQueue.framework */,
-				D5F72F361A8D423C006A0BE9 /* PriorityQueueTests.xctest */,
+				D5F72F361A8D423C006A0BE9 /* PriorityQueue-IOSTests.xctest */,
+				D5C03D4C1A8DD1D800FBD3C5 /* PriorityQueue.framework */,
+				D5C03D561A8DD1D800FBD3C5 /* PriorityQueue-OSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +140,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D5C03D491A8DD1D800FBD3C5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5F72F291A8D423C006A0BE9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,9 +157,45 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D5F72F2B1A8D423C006A0BE9 /* PriorityQueue */ = {
+		D5C03D4B1A8DD1D800FBD3C5 /* PriorityQueue-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5F72F3F1A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueue" */;
+			buildConfigurationList = D5C03D5F1A8DD1D800FBD3C5 /* Build configuration list for PBXNativeTarget "PriorityQueue-OSX" */;
+			buildPhases = (
+				D5C03D471A8DD1D800FBD3C5 /* Sources */,
+				D5C03D481A8DD1D800FBD3C5 /* Frameworks */,
+				D5C03D491A8DD1D800FBD3C5 /* Headers */,
+				D5C03D4A1A8DD1D800FBD3C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PriorityQueue-OSX";
+			productName = "PriorityQueue-OSX";
+			productReference = D5C03D4C1A8DD1D800FBD3C5 /* PriorityQueue.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D5C03D551A8DD1D800FBD3C5 /* PriorityQueue-OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5C03D621A8DD1D800FBD3C5 /* Build configuration list for PBXNativeTarget "PriorityQueue-OSXTests" */;
+			buildPhases = (
+				D5C03D521A8DD1D800FBD3C5 /* Sources */,
+				D5C03D531A8DD1D800FBD3C5 /* Frameworks */,
+				D5C03D541A8DD1D800FBD3C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5C03D591A8DD1D800FBD3C5 /* PBXTargetDependency */,
+			);
+			name = "PriorityQueue-OSXTests";
+			productName = "PriorityQueue-OSXTests";
+			productReference = D5C03D561A8DD1D800FBD3C5 /* PriorityQueue-OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D5F72F2B1A8D423C006A0BE9 /* PriorityQueue-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5F72F3F1A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueue-iOS" */;
 			buildPhases = (
 				D5F72F271A8D423C006A0BE9 /* Sources */,
 				D5F72F281A8D423C006A0BE9 /* Frameworks */,
@@ -134,14 +206,14 @@
 			);
 			dependencies = (
 			);
-			name = PriorityQueue;
+			name = "PriorityQueue-iOS";
 			productName = PriorityQueue;
 			productReference = D5F72F2C1A8D423C006A0BE9 /* PriorityQueue.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D5F72F351A8D423C006A0BE9 /* PriorityQueueTests */ = {
+		D5F72F351A8D423C006A0BE9 /* PriorityQueue-IOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5F72F421A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueueTests" */;
+			buildConfigurationList = D5F72F421A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueue-IOSTests" */;
 			buildPhases = (
 				D5F72F321A8D423C006A0BE9 /* Sources */,
 				D5F72F331A8D423C006A0BE9 /* Frameworks */,
@@ -152,9 +224,9 @@
 			dependencies = (
 				D5F72F391A8D423C006A0BE9 /* PBXTargetDependency */,
 			);
-			name = PriorityQueueTests;
+			name = "PriorityQueue-IOSTests";
 			productName = PriorityQueueTests;
-			productReference = D5F72F361A8D423C006A0BE9 /* PriorityQueueTests.xctest */;
+			productReference = D5F72F361A8D423C006A0BE9 /* PriorityQueue-IOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -166,6 +238,12 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Bouke Haarsma";
 				TargetAttributes = {
+					D5C03D4B1A8DD1D800FBD3C5 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					D5C03D551A8DD1D800FBD3C5 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					D5F72F2B1A8D423C006A0BE9 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -186,13 +264,29 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5F72F2B1A8D423C006A0BE9 /* PriorityQueue */,
-				D5F72F351A8D423C006A0BE9 /* PriorityQueueTests */,
+				D5F72F2B1A8D423C006A0BE9 /* PriorityQueue-iOS */,
+				D5F72F351A8D423C006A0BE9 /* PriorityQueue-IOSTests */,
+				D5C03D4B1A8DD1D800FBD3C5 /* PriorityQueue-OSX */,
+				D5C03D551A8DD1D800FBD3C5 /* PriorityQueue-OSXTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D5C03D4A1A8DD1D800FBD3C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C03D541A8DD1D800FBD3C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5F72F2A1A8D423C006A0BE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +304,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D5C03D471A8DD1D800FBD3C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C03D671A8DD40400FBD3C5 /* PriorityQueue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C03D521A8DD1D800FBD3C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C03D681A8DD40900FBD3C5 /* PriorityQueueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5F72F271A8D423C006A0BE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,14 +339,99 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D5C03D591A8DD1D800FBD3C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5C03D4B1A8DD1D800FBD3C5 /* PriorityQueue-OSX */;
+			targetProxy = D5C03D581A8DD1D800FBD3C5 /* PBXContainerItemProxy */;
+		};
 		D5F72F391A8D423C006A0BE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5F72F2B1A8D423C006A0BE9 /* PriorityQueue */;
+			target = D5F72F2B1A8D423C006A0BE9 /* PriorityQueue-iOS */;
 			targetProxy = D5F72F381A8D423C006A0BE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D5C03D601A8DD1D800FBD3C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PriorityQueue/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = PriorityQueue;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D5C03D611A8DD1D800FBD3C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = PriorityQueue/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = PriorityQueue;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D5C03D631A8DD1D800FBD3C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PriorityQueueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D5C03D641A8DD1D800FBD3C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PriorityQueueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		D5F72F1D1A8D4120006A0BE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -337,7 +532,7 @@
 				INFOPLIST_FILE = PriorityQueue/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PriorityQueue;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -354,7 +549,7 @@
 				INFOPLIST_FILE = PriorityQueue/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PriorityQueue;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -392,6 +587,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D5C03D5F1A8DD1D800FBD3C5 /* Build configuration list for PBXNativeTarget "PriorityQueue-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5C03D601A8DD1D800FBD3C5 /* Debug */,
+				D5C03D611A8DD1D800FBD3C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D5C03D621A8DD1D800FBD3C5 /* Build configuration list for PBXNativeTarget "PriorityQueue-OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5C03D631A8DD1D800FBD3C5 /* Debug */,
+				D5C03D641A8DD1D800FBD3C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D5F72F031A8D4120006A0BE9 /* Build configuration list for PBXProject "Swift-PriorityQueue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -401,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5F72F3F1A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueue" */ = {
+		D5F72F3F1A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueue-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5F72F401A8D423C006A0BE9 /* Debug */,
@@ -410,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5F72F421A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueueTests" */ = {
+		D5F72F421A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueue-IOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5F72F431A8D423C006A0BE9 /* Debug */,
