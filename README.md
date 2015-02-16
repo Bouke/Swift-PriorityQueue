@@ -66,6 +66,14 @@ ints.remove(3)  // Returns 3
 ints.remove(3)  // Returns nil
 ```
 
+## Inspecting the heap
+
+```swift
+ints.push(5)
+ints.push(4)
+ints.heap  // Returns [4, 5]
+```
+
 # Alternatives
 
 * CFBinaryHeap (once CFunctionPointer becomes available)

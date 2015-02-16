@@ -10,76 +10,84 @@ import Foundation
 
 public class PriorityQueue<T> {
 
-    private final var heap: [T]
+    private final var _heap: [T]
     private let compare: (T, T) -> Bool
 
     public init(_ compare: (T, T) -> Bool) {
-        heap = []
+        _heap = []
         self.compare = compare
     }
 
-    public func push(newElement: T) {
-        heap.append(newElement)
+    public var heap: [T] {
+        return _heap
+    }
 
-        if heap.count == 1 {
+    public func push(newElement: T) {
+        _heap.append(newElement)
+
+        if _heap.count == 1 {
             return
         }
 
-        var current = heap.count - 1
+        var current = _heap.count - 1
         while current > 0 {
             var parent = (current - 1) >> 1
-            if compare(heap[parent], heap[current]) {
+            if compare(_heap[parent], _heap[current]) {
                 break
             }
-            (heap[parent], heap[current]) = (heap[current], heap[parent])
+            (_heap[parent], _heap[current]) = (_heap[current], _heap[parent])
             current = parent
         }
     }
 
     public func pop() -> T? {
-        if heap.count == 0 {
+        if _heap.count == 0 {
             return nil
         }
-        swap(&heap[0], &heap[heap.endIndex - 1])
-        let pop = heap.removeLast()
-        heapify(0)
+        swap(&_heap[0], &_heap[_heap.endIndex - 1])
+        let pop = _heap.removeLast()
+        _heapify(0)
         return pop
     }
 
     public func removeAll() {
-        heap.removeAll()
+        _heap.removeAll()
     }
 
-    private func heapify(index: Int) {
+    private func _heapify(index: Int) {
         let left = index * 2 + 1
         let right = index * 2 + 2
         var smallest = index
 
-        let count = heap.count
+        let count = _heap.count
 
-        if left < count && compare(heap[left], heap[smallest]) {
+        if left < count && compare(_heap[left], _heap[smallest]) {
             smallest = left
         }
-        if right < count && compare(heap[right], heap[smallest]) {
+        if right < count && compare(_heap[right], _heap[smallest]) {
             smallest = right
         }
         if smallest != index {
-            swap(&heap[index], &heap[smallest])
-            heapify(smallest)
+            swap(&_heap[index], &_heap[smallest])
+            _heapify(smallest)
         }
     }
 
     public var count: Int {
-        return heap.count
+        return _heap.count
     }
 
-    public func remove<T2 where T2: Comparable>(element: T2) -> T? {
+    public var isEmpty: Bool {
+        return _heap.isEmpty
+    }
+
+    public func remove<T2 where T2: Equatable>(element: T2) -> T? {
         assert(element is T)  // How to enforce this with type constraints?
-        for (index, item) in enumerate(heap) {
-            if (item as T2) == element {
-                swap(&heap[index], &heap[heap.endIndex - 1])
-                heap.removeLast()
-                heapify(index)
+        for (index, item) in enumerate(_heap) {
+            if (item as! T2) == element {
+                swap(&_heap[index], &_heap[_heap.endIndex - 1])
+                _heap.removeLast()
+                _heapify(index)
                 return item
             }
         }
