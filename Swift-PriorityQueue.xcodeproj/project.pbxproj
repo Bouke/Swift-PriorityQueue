@@ -40,7 +40,7 @@
 		D5C1D4BB1A8D45E000C3F3E3 /* README.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = README.playground; sourceTree = "<group>"; };
 		D5F72F2C1A8D423C006A0BE9 /* PriorityQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PriorityQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F72F2F1A8D423C006A0BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5F72F361A8D423C006A0BE9 /* PriorityQueue-IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriorityQueue-IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F72F361A8D423C006A0BE9 /* PriorityQueue-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriorityQueue-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F72F3C1A8D423C006A0BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5F72F3D1A8D423C006A0BE9 /* PriorityQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueTests.swift; sourceTree = "<group>"; };
 		D5F72F451A8D4273006A0BE9 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F72F2C1A8D423C006A0BE9 /* PriorityQueue.framework */,
-				D5F72F361A8D423C006A0BE9 /* PriorityQueue-IOSTests.xctest */,
+				D5F72F361A8D423C006A0BE9 /* PriorityQueue-iOSTests.xctest */,
 				D5C03D4C1A8DD1D800FBD3C5 /* PriorityQueue.framework */,
 				D5C03D561A8DD1D800FBD3C5 /* PriorityQueue-OSXTests.xctest */,
 			);
@@ -211,9 +211,9 @@
 			productReference = D5F72F2C1A8D423C006A0BE9 /* PriorityQueue.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D5F72F351A8D423C006A0BE9 /* PriorityQueue-IOSTests */ = {
+		D5F72F351A8D423C006A0BE9 /* PriorityQueue-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5F72F421A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueue-IOSTests" */;
+			buildConfigurationList = D5F72F421A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueue-iOSTests" */;
 			buildPhases = (
 				D5F72F321A8D423C006A0BE9 /* Sources */,
 				D5F72F331A8D423C006A0BE9 /* Frameworks */,
@@ -224,9 +224,9 @@
 			dependencies = (
 				D5F72F391A8D423C006A0BE9 /* PBXTargetDependency */,
 			);
-			name = "PriorityQueue-IOSTests";
+			name = "PriorityQueue-iOSTests";
 			productName = PriorityQueueTests;
-			productReference = D5F72F361A8D423C006A0BE9 /* PriorityQueue-IOSTests.xctest */;
+			productReference = D5F72F361A8D423C006A0BE9 /* PriorityQueue-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +265,7 @@
 			projectRoot = "";
 			targets = (
 				D5F72F2B1A8D423C006A0BE9 /* PriorityQueue-iOS */,
-				D5F72F351A8D423C006A0BE9 /* PriorityQueue-IOSTests */,
+				D5F72F351A8D423C006A0BE9 /* PriorityQueue-iOSTests */,
 				D5C03D4B1A8DD1D800FBD3C5 /* PriorityQueue-OSX */,
 				D5C03D551A8DD1D800FBD3C5 /* PriorityQueue-OSXTests */,
 			);
@@ -594,6 +594,7 @@
 				D5C03D611A8DD1D800FBD3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5C03D621A8DD1D800FBD3C5 /* Build configuration list for PBXNativeTarget "PriorityQueue-OSXTests" */ = {
 			isa = XCConfigurationList;
@@ -602,6 +603,7 @@
 				D5C03D641A8DD1D800FBD3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5F72F031A8D4120006A0BE9 /* Build configuration list for PBXProject "Swift-PriorityQueue" */ = {
 			isa = XCConfigurationList;
@@ -621,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5F72F421A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueue-IOSTests" */ = {
+		D5F72F421A8D423C006A0BE9 /* Build configuration list for PBXNativeTarget "PriorityQueue-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5F72F431A8D423C006A0BE9 /* Debug */,

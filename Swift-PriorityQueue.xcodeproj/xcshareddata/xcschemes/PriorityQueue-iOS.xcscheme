@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D5F72F351A8D423C006A0BE9"
-               BuildableName = "PriorityQueue-IOSTests.xctest"
-               BlueprintName = "PriorityQueue-IOSTests"
+               BuildableName = "PriorityQueue-iOSTests.xctest"
+               BlueprintName = "PriorityQueue-iOSTests"
                ReferencedContainer = "container:Swift-PriorityQueue.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D5F72F351A8D423C006A0BE9"
-               BuildableName = "PriorityQueue-IOSTests.xctest"
-               BlueprintName = "PriorityQueue-IOSTests"
+               BuildableName = "PriorityQueue-iOSTests.xctest"
+               BlueprintName = "PriorityQueue-iOSTests"
                ReferencedContainer = "container:Swift-PriorityQueue.xcodeproj">
             </BuildableReference>
          </TestableReference>
