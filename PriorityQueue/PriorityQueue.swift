@@ -18,26 +18,9 @@ public class PriorityQueue<T> {
         self.compare = compare
     }
 
-    public var heap: [T] {
-        return _heap
-    }
-
     public func push(newElement: T) {
         _heap.append(newElement)
-
-        if _heap.count == 1 {
-            return
-        }
-
-        var current = _heap.count - 1
-        while current > 0 {
-            var parent = (current - 1) >> 1
-            if compare(_heap[parent], _heap[current]) {
-                break
-            }
-            (_heap[parent], _heap[current]) = (_heap[current], _heap[parent])
-            current = parent
-        }
+        siftUp(_heap.endIndex - 1)
     }
 
     public func pop() -> T? {
@@ -46,33 +29,44 @@ public class PriorityQueue<T> {
         }
         swap(&_heap[0], &_heap[_heap.endIndex - 1])
         let pop = _heap.removeLast()
-        _heapify(0)
+        siftDown(0)
         return pop
     }
 
-    public func removeAll() {
-        _heap.removeAll()
-    }
-
-    private func _heapify(index: Int) {
+    private func siftDown(index: Int) -> Bool {
         let left = index * 2 + 1
         let right = index * 2 + 2
         var smallest = index
 
-        let count = _heap.count
-
-        if left < count && compare(_heap[left], _heap[smallest]) {
+        if left < _heap.count && compare(_heap[left], _heap[smallest]) {
             smallest = left
         }
-        if right < count && compare(_heap[right], _heap[smallest]) {
+        if right < _heap.count && compare(_heap[right], _heap[smallest]) {
             smallest = right
         }
         if smallest != index {
             swap(&_heap[index], &_heap[smallest])
-            _heapify(smallest)
+            siftDown(smallest)
+            return true
         }
+        return false
     }
 
+    private func siftUp(index: Int) -> Bool {
+        if index == 0 {
+            return false
+        }
+        let parent = (index - 1) >> 1
+        if compare(_heap[index], _heap[parent]) {
+            swap(&_heap[index], &_heap[parent])
+            siftUp(parent)
+            return true
+        }
+        return false
+    }
+}
+
+extension PriorityQueue {
     public var count: Int {
         return _heap.count
     }
@@ -81,17 +75,38 @@ public class PriorityQueue<T> {
         return _heap.isEmpty
     }
 
+    public func update<T2 where T2: Equatable>(element: T2) -> T? {
+        assert(element is T)  // How to enforce this with type constraints?
+        for (index, item) in enumerate(_heap) {
+            if (item as! T2) == element {
+                _heap[index] = element as! T
+                if siftDown(index) || siftUp(index) {
+                    return item
+                }
+            }
+        }
+        return nil
+    }
+
     public func remove<T2 where T2: Equatable>(element: T2) -> T? {
         assert(element is T)  // How to enforce this with type constraints?
         for (index, item) in enumerate(_heap) {
             if (item as! T2) == element {
                 swap(&_heap[index], &_heap[_heap.endIndex - 1])
                 _heap.removeLast()
-                _heapify(index)
+                siftDown(index)
                 return item
             }
         }
         return nil
+    }
+
+    public var heap: [T] {
+        return _heap
+    }
+
+    public func removeAll() {
+        _heap.removeAll()
     }
 }
 
