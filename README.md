@@ -78,6 +78,7 @@ ints.heap  // Returns [4, 5]
 
 * CFBinaryHeap (once CFunctionPointer becomes available)
 * Swift-DataStructures/MinPQ
+* [davecom/SwiftPriorityQueue](https://github.com/davecom/SwiftPriorityQueue)
 
 # Development
 ## Playground
