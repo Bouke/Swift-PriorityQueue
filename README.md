@@ -87,3 +87,7 @@ Rebuild this playground with the following command:
 
     rm -rf README.playground/
     playground README.md --platform ios
+
+## Credits
+
+This library was written by [Bouke Haarsma](https://twitter.com/BoukeHaarsma).
